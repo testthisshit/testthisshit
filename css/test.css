@@ -26,3 +26,7 @@ iframe#insticator-embed-600-350 {
 iframe#insticator-embed-300-250 {
     border: none;
 }
+
+iframe#insticator-embed {
+    border: none;
+}
