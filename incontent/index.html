@@ -11,7 +11,7 @@
 
 <body>
 
-<section class="widget-section" style="min-width:640px">
+<section class="widget-section" style="max-width:640px">
     <iframe id="insticator-embed"></iframe>
     <script>
         if (window.navigator.userAgent.indexOf('MSIE ') > 0 || window.navigator.userAgent.indexOf('Trident/') > 0) {
@@ -29,12 +29,12 @@
             iframeEl.contentWindow.document.head.appendChild(script);
         }
     </script>
-    <div id="div-insticator-ads">
-        <div id="div-insticator-ad-1"></div>
+    <div id="div-insticator-ads" style="text-align:center">
+        <div id="div-insticator-ad-1" style="display:inline-block"></div>
         <script data-cfasync='false' type="text/javascript">
             /*<![CDATA[*/Insticator.ad.loadAd("div-insticator-ad-1");/*]]>*/
         </script>
-        <div id="div-insticator-ad-2"></div>
+        <div id="div-insticator-ad-2" style="display:inline-block"></div>
         <script data-cfasync='false' type="text/javascript">
             /*<![CDATA[*/Insticator.ad.loadAd("div-insticator-ad-2");/*]]>*/
         </script>
