@@ -2,48 +2,26 @@
 <head>
     <title>Embed test page</title>
     <link rel="stylesheet" href="/css/test.css">
-    <link rel="stylesheet" href="/css/incontent.css">
-    <link rel="amphtml" href="http://testthisshit.online/amp/index.html">
-    <!-- Insticator Header Tag Code -->
-    <script data-cfasync='false' type='text/javascript'>/*<![CDATA[*/(function (a, c, s, u){'Insticator'in a || (a.Insticator={ad:{loadAd: function (b){Insticator.ad.q.push(b)}, q: []}, helper:{}, embed:{}, version: "3.0", q: [], load: function (t, o){Insticator.q.push({t: t, o: o})}}); var b=c.createElement(s); b.src=u; b.async=!0; var d=c.getElementsByTagName(s)[0]; d.parentNode.insertBefore(b, d)})(window, document, 'script', '//d2na2p72vtqyok.cloudfront.net/client-embed/b952f440-5dc1-43c6-9ed5-35029fe6e913.js');/*]]>*/</script>
-    <!-- End Insticator Header Tag Code -->
-</head>
-
-<body>
-
-<section class="widget-section" style="max-width:640px">
-    <iframe id="insticator-embed"></iframe>
-    <script>
-        if (window.navigator.userAgent.indexOf('MSIE ') > 0 || window.navigator.userAgent.indexOf('Trident/') > 0) {
-            console.log('IE Detected');
-        } else {
-            var iframeEl = document.getElementById("insticator-embed");
-            iframeEl.border="none";
-            var div = document.createElement("div");
-            div.id = "app";
-            iframeEl.contentWindow.document.body.appendChild(div);
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-            script.async = true;
-            script.src = "https://dzh3i6aoot1g7.cloudfront.net/embed-core/embed-core-tts.js";
-            iframeEl.contentWindow.document.head.appendChild(script);
-        }
+    <!-- Header Tag Code -->
+    <script data-cfasync='false' type='text/javascript'>
+        /*<![CDATA[*/(function (a, c, s, u){'Insticator'in a || (a.Insticator={ad:{loadAd: function (b){Insticator.ad.q.push(b)}, q: []}, helper:{}, embed:{}, version: "3.0", q: [], load: function (t, o){Insticator.q.push({t: t, o: o})}}); var b=c.createElement(s); b.src=u; b.async=!0; var d=c.getElementsByTagName(s)[0]; d.parentNode.insertBefore(b, d)})(window, document, 'script', '//d2na2p72vtqyok.cloudfront.net/client-embed/ca9a3b5a-e0ae-409f-b332-306d751fa9c9.js');/*]]>*/
     </script>
-    <div id="div-insticator-ads" style="text-align: center">
-        <div id="div-insticator-ad-1-wrapper" style="display:inline-block">
-            <div id="div-insticator-ad-1"></div>
-            <script data-cfasync='false' type="text/javascript">
-                /*<![CDATA[*/Insticator.ad.loadAd("div-insticator-ad-1");/*]]>*/
-            </script>
-        </div>
-        <div id="div-insticator-ad-2-wrapper" style="display:inline-block">
-            <div id="div-insticator-ad-2"></div>
-            <script data-cfasync='false' type="text/javascript">
-                /*<![CDATA[*/Insticator.ad.loadAd("div-insticator-ad-2");/*]]>*/
-            </script>
-        </div>
+    <!-- End Header Tag Code -->
+</head>
+<body>
+<section class="widget-section" style="width:640px">
+    <!-- Insticator API Embed v4 -->
+    <div id="insticator-container">
+        <div id="div-insticator-ad-1"></div>
+        <div id="insticator-embed"></div>
+        <div id="div-insticator-ad-2"></div>
+        <script data-cfasync='false' type="text/javascript">
+            /*<![CDATA[*/Insticator.ad.loadAd("div-insticator-ad-1");
+            Insticator.ad.loadAd("div-insticator-ad-2");
+            Insticator.load("em",{id : "ac9f6e22-f056-4c34-af0c-08b4e24f21fd"})/*]]>*/
+        </script>
     </div>
+    <!-- End Insticator API Embed v4 -->
 </section>
-
 </body>
 </html>
