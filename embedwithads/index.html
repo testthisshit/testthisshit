@@ -3,11 +3,18 @@
     <title>Embed test page</title>
     <link rel="stylesheet" href="/css/test.css">
     <link rel="amphtml" href="http://testthisshit.online/amp/index.html">
+    <!-- Insticator Header Tag Code -->
+    <script data-cfasync='false' type='text/javascript'>/*<![CDATA[*/(function (a, c, s, u){'Insticator'in a || (a.Insticator={ad:{loadAd: function (b){Insticator.ad.q.push(b)}, q: []}, helper:{}, embed:{}, version: "3.0", q: [], load: function (t, o){Insticator.q.push({t: t, o: o})}}); var b=c.createElement(s); b.src=u; b.async=!0; var d=c.getElementsByTagName(s)[0]; d.parentNode.insertBefore(b, d)})(window, document, 'script', '//d2na2p72vtqyok.cloudfront.net/client-embed/b952f440-5dc1-43c6-9ed5-35029fe6e913.js');/*]]>*/</script>
+    <!-- End Insticator Header Tag Code -->
 </head>
 
 <body>
 
 <section class="widget-section" style="width:300px">
+    <div id="div-insticator-ad-1"></div>
+    <script data-cfasync='false' type="text/javascript">
+        /*<![CDATA[*/Insticator.ad.loadAd("div-insticator-ad-1");/*]]>*/
+    </script>
     <iframe id="insticator-embed"></iframe>
     <script>
         if (window.navigator.userAgent.indexOf('MSIE ') > 0 || window.navigator.userAgent.indexOf('Trident/') > 0) {
@@ -24,6 +31,10 @@
             script.src = "https://dzh3i6aoot1g7.cloudfront.net/embed-core/embed-core-tts.js";
             iframeEl.contentWindow.document.head.appendChild(script);
         }
+    </script>
+    <div id="div-insticator-ad-2"></div>
+    <script data-cfasync='false' type="text/javascript">
+        /*<![CDATA[*/Insticator.ad.loadAd("div-insticator-ad-2");/*]]>*/
     </script>
     <!-- End Insticator Embed Code-->
 </section>
