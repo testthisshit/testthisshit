@@ -15,6 +15,11 @@ body {
     color: #eeeeee;
 }
 
+.tall-block {
+    width: 100%;
+    height: 900px;
+}
+
 iframe#insticator-embed-300-350 {
     border: none;
 }
