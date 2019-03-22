@@ -28,19 +28,6 @@ a {
     height: 900px;
     background-color: rgb(200, 200, 50);
 }
-
-iframe#insticator-embed-300-350 {
-    border: none;
-}
-
-iframe#insticator-embed-600-350 {
-    border: none;
-}
-
-iframe#insticator-embed-300-250 {
-    border: none;
-}
-
 iframe#insticator-embed {
     border: none;
 }
