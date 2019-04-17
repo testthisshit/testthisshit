@@ -1,75 +1,14 @@
-<!--
-  ## Introduction
-
-  Use [amp-iframe]({{g.doc('/content/amp-dev/documentation/components/reference/amp-iframe.md', locale=doc.locale).url.path}}) for embedding content into AMP files via iframe. Useful for displaying content otherwise not (yet) supported by AMP.
-
-  Note: We're using [Vimeo](https://vimeo.com/) embeds here for an example, but any kind of content works. If you're interested in embedding Vimeo in AMP, it's recommended that you use the provided [`amp-vimeo` component]({{g.doc('/content/amp-dev/documentation/components/reference/amp-vimeo.md', locale=doc.locale).url.path}}) instead.
--->
-<!-- -->
-<!doctype html>
-<html ⚡>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>amp-iframe</title>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <!--  Import the amp-iframe component in the header. -->
-    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-    <!-- You can use the `amp-bind` extension to dynamically change an iframe src. -->
-    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-    <link rel="canonical" href="https://amp.dev/documentation/examples/components/amp-iframe/index.html">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <style amp-custom>
-        #sample-resizable-iframe div[overflow] {
-            text-align: center;
-            background: #f9f7f7;
-            line-height: 36px;
+    <style>
+        body {
+            margin: 0 !important;
         }
     </style>
 </head>
 <body>
-
-
-<!-- ## Resizable iframe -->
-<!--
-  One important feature of `amp-iframe` is the ability to resize the iframe  at runtime. For this to work:
-<ul>
-  <li>The `amp-iframe` must set the `allow-same-origin` sandbox attribute.</li>
-  <li>The `amp-iframe` must be defined with the `resizable` attribute.</li>
-  <li>The `amp-iframe` must have an `overflow` child element.</li>
-  <li>The iframe document must send an `embed-size` request:</li>
-</ul>
-
-  ```js
-  window.parent.postMessage({
-    sentinel: 'amp',
-    type: 'embed-size',
-    height: document.body.scrollHeight
-  }, '*');
-  ```
-
-  The following example demonstrates two resizing use cases:
-
-  1. **Resize on load:** the iframe size is initially set to `150x150`px via the `amp-iframe` layout. On page load, the embedded iframe will resize itself to `200x200`px.
-  2. **Resize on user interaction:** pressing the button will resize the iframe to `300x300`px.
-
-<!-- ## Dynamically changing the iframe src -->
-<!--
-  With `amp-bind` the `src` for iframes embedded with `amp-iframe` can be changed.
--->
-<div>
-    <amp-iframe id="amp-iframe"
-                title="Insticator Embed"
-                width="auto"
-                height="600"
-                layout="fixed-height"
-                sandbox="allow-scripts allow-same-origin allow-popups"
-                allowfullscreen
-                frameborder="0"
-                src="https://vladdeev.com/ampsrc/">
-        <amp-img layout="fill" src="https://i.vimeocdn.com/video/536538454_640.webp" placeholder></amp-img>
-    </amp-iframe>
-    <!--<button on="tap:AMP.setState({ myIframeUrl: 'https://player.vimeo.com/video/185199565' })">Change src</button>-->
-</div>
+<!-- Header Tag Code --><script data-cfasync='false' type='text/javascript'>/*<![CDATA[*/(function (a, c, s, u){'Insticator'in a || (a.Insticator={ad:{loadAd: function (b){Insticator.ad.q.push(b)}, q: []}, helper:{}, embed:{}, version: "4.0", q: [], load: function (t, o){Insticator.q.push({t: t, o: o})}}); var b=c.createElement(s); b.src=u; b.async=!0; var d=c.getElementsByTagName(s)[0]; d.parentNode.insertBefore(b, d)})(window, document, 'script', '//d3lcz8vpax4lo2.cloudfront.net/ads-code/ca9a3b5a-e0ae-409f-b332-306d751fa9c9.js');/*]]>*/</script><!-- End Header Tag Code -->
+<!-- Insticator API Embed --><div id="insticator-container"><div id="div-insticator-ad-1"></div><div id="insticator-embed" embed-id="55c71411-377c-4df8-984e-d115458fb44b"></div><div id="div-insticator-ad-2"></div><script data-cfasync='false' type="text/javascript">/*<![CDATA[*/Insticator.ad.loadAd("div-insticator-ad-1");Insticator.ad.loadAd("div-insticator-ad-2");Insticator.load("em",{id : "55c71411-377c-4df8-984e-d115458fb44b"});/*]]>*/</script></div><!-- End Insticator API Embed -->
 </body>
 </html>
