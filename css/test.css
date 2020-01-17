@@ -13,11 +13,11 @@ h4 {
 }
 
 h1, h3 {
+    text-align: center;
     font-family: sans-serif;
     color: #eeeeee;
 }
 h1 {
-    text-align: center;
     font-size: 1.25em;
 }
 h3 {
