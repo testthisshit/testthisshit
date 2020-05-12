@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function createObserver() {
+            let options = {
+                root: null,
+                threshold: [0, 0.25, 0.5, 0.75, 1]
+            };
+
+            let observer = new IntersectionObserver(handleIntersect, options);
+            let targetElement = document.getElementById('app');
+            observer.observe(targetElement);
+        }
+
+        function handleIntersect(entries, observer) {
+            console.log('entries:', entries, 'observer:', observer);
+            entries.forEach(entry => {
+                console.log('entry', entry)
+                // Each entry describes an intersection change for one observed
+                // target element:
+                //   entry.boundingClientRect
+                //   entry.intersectionRatio
+                //   entry.intersectionRect
+                //   entry.isIntersecting
+                //   entry.rootBounds
+                //   entry.target
+                //   entry.time
+            });
+        }
+
+        window.onload = createObserver;
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>
